@@ -43,12 +43,12 @@ exports.handler = (event, context, callback) => {
             }
             break;
         case 'POST':
-            done(null, event.body);
-            //done(new Error(`Unsupported method "${event.httpMethod}"`));
+            //done(null, event.body);
+            done(new Error(`Unsupported method "${event.httpMethod}"`));
             break;
         case 'PUT':
-            done(null, event);
-            //done(new Error(`Unsupported method "${event.httpMethod}"`));
+            //done(null, event);
+            done(new Error(`Unsupported method "${event.httpMethod}"`));
             break;
         default:
             done(new Error(`Unsupported method "${event.httpMethod}"`));
