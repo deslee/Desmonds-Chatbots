@@ -30,7 +30,7 @@ exports.handler = (event, context, callback) => {
             done(new Error(`Unsupported method "${event.httpMethod}"`));
             break;
         case 'GET':
-            if (event.queryStringParameters.subreddit) {
+            if (event.queryStringParameters && event.queryStringParameters.subreddit) {
               reddit(event.queryStringParameters.subreddit, done);
             }
             //done(new Error(`Unsupported method "${event.httpMethod}"`));
