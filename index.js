@@ -28,7 +28,7 @@ exports.handler = (event, context, callback) => {
             done(new Error(`Unsupported method "${event.httpMethod}"`));
             break;
         case 'GET':
-            done(null, {text: "Hello world!!!"});
+            done(null, {text: "Hello world!"});
             break;
         case 'POST':
             done(new Error(`Unsupported method "${event.httpMethod}"`));
